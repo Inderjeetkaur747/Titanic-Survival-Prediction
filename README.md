@@ -193,6 +193,7 @@ consistent with real-world Titanic data, not model bias.
 explaining why certain passengers were predicted to survive.
 
 4. Key Insights
+   
 • A surrogate model is a safe, interpretable way to understand complex or
 opaque systems.
 • Reverse engineering helps identify hidden dependencies and potential
@@ -200,17 +201,20 @@ ethical risks before deployment.
 • Even though the Decision Tree is simpler, it gives strong insight into what
 drives predictions.
 
-5. Recommendations & Defensive Techniques
+6. Recommendations & Defensive Techniques
+   
 1. Model Auditing & Bias Reduction:
+   
 • Regularly evaluate feature impacts using SHAP/LIME.
 • Monitor accuracy separately for different gender or class groups.
 
-2. Security & Intellectual Property Protection:
+3. Security & Intellectual Property Protection:
+   
 • Watermarking: embed a signature to verify model ownership.
 • Obfuscation: hide internal parameters to prevent model theft.
 • Encryption: secure the .pkl or API model before deployment.
 
-3. Future Improvements:
+5. Future Improvements:
 • Try more advanced surrogates (e.g., logistic regression or gradient
 boosting).
 • Automate fairness checks in the pipeline.
@@ -242,6 +246,7 @@ how features like Sex, Pclass, Fare, and IsAlone influence predictions, but
 it is not intended as the main predictive model.
 
 Deployment Plan:
+
 • The FastAPI / Streamlit app will use Level 1 Random Forest to provide
 survival predictions.
 This approach ensures that users get accurate predictions while still having the
